@@ -29,24 +29,16 @@ public class BankManagementSystem {
 
                 // Handling user choice
                 switch (choice) {
-                    case 1:
-                        createAccount();
-                        break;
-                    case 2:
-                        depositMoney();
-                        break;
-                    case 3:
-                        withdrawMoney();
-                        break;
-                    case 4:
-                        checkBalance();
-                        break;
-                    case 0:
+                    case 1 -> createAccount();
+                    case 2 -> depositMoney();
+                    case 3 -> withdrawMoney();
+                    case 4 -> checkBalance();
+                    case 0 -> {
                         System.out.println("Exiting... Thank you!");
                         scanner.close();
                         return;
-                    default:
-                        System.out.println("Invalid choice. Please try again.");
+                    }
+                    default -> System.out.println("Invalid choice. Please try again.");
                 }
             } catch (Exception e) {
                 // Handling exceptions
